@@ -1,0 +1,166 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+body{
+background:#020617;
+color:white;
+overflow-x:hidden;
+transition:0.5s;
+}
+
+/* LIGHT MODE */
+body.light{
+background:#f1f5f9;
+color:#020617;
+}
+
+/* ===== CURSOR GLOW ===== */
+.cursor-glow{
+position:fixed;
+width:300px;
+height:300px;
+background:radial-gradient(circle,#22f0ff33,transparent);
+pointer-events:none;
+transform:translate(-50%,-50%);
+z-index:0;
+}
+
+/* ===== NAVBAR ===== */
+.glass-nav{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+z-index:10;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+}
+
+#themeToggle{
+background:none;
+border:none;
+font-size:20px;
+cursor:pointer;
+color:#22f0ff;
+}
+
+/* ===== HERO ===== */
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero span{
+color:#22f0ff;
+text-shadow:0 0 20px #22f0ff;
+}
+
+.profile-pic{
+width:160px;
+height:160px;
+border-radius:50%;
+box-shadow:0 0 40px #22f0ff55;
+}
+
+/* ===== GLASS CARD ===== */
+section{
+max-width:900px;
+margin:80px auto;
+padding:40px;
+}
+
+.glass{
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+opacity:0;
+transform:translateY(80px);
+transition:1s;
+}
+
+.glass.show{
+opacity:1;
+transform:translateY(0);
+}
+
+section h2{
+margin-bottom:20px;
+color:#22f0ff;
+}
+
+/* ===== SKILLS ===== */
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.skills span{
+padding:10px 20px;
+border-radius:30px;
+border:1px solid #22f0ff;
+transition:.3s;
+cursor:pointer;
+}
+
+.skills span:hover{
+background:#22f0ff;
+color:#000;
+transform:scale(1.1);
+}
+
+/* ===== PROJECT CARDS ===== */
+.project{
+padding:20px;
+margin-bottom:15px;
+border-radius:15px;
+background:rgba(255,255,255,0.05);
+transition:0.3s;
+transform-style:preserve-3d;
+}
+
+/* ===== COMPANY GRID ===== */
+.company-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:25px;
+}
+
+.company-grid img{
+width:100%;
+filter:grayscale(100%);
+transition:0.4s;
+}
+
+.company-grid img:hover{
+filter:none;
+transform:scale(1.1);
+}
+
+footer{
+text-align:center;
+padding:30px;
+opacity:0.6;
+}
